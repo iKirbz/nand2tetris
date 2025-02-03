@@ -1,0 +1,43 @@
+class List {
+
+    field int data;
+    field List next;
+    
+    constructor List new(int x, int y) {
+        let data = x;
+        let next = y;
+
+        return this;
+    
+    }
+
+    method int getData() {
+        return data;
+    }
+
+    method List getNext() {
+        return next;    
+    }
+
+    method void print() {
+
+        do Output.printInt(data);
+        do Output.printChar(32);
+
+        if (~(next = null)) {
+            do next.print();
+        }
+        
+        return;
+    }
+
+    method void dispose() {
+
+        if (~(next = null)) {
+            do next.dispose();
+        }
+        
+        do Memory.deAlloc(this);
+        return;
+    }
+}

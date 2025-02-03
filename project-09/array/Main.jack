@@ -1,0 +1,21 @@
+class Main {
+    function void main() {
+        
+        var Array arr;
+        var String helloWorld;
+        var Fraction test;
+        let helloWorld = "Hello World!";
+
+        let arr = Array.new(4);
+        let arr[0] = 12;
+        let arr[1] = false;
+        let arr[2] = Fraction.new(314, 100);
+        let arr[3] = helloWorld;
+
+        let test = arr[2];
+
+        do test.print();
+
+        return;
+    }
+}

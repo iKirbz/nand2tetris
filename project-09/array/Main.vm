@@ -1,0 +1,76 @@
+function Main.main 3
+    push constant 12
+    call String.new 1
+    push constant 72
+    call String.appendChar 2
+    push constant 101
+    call String.appendChar 2
+    push constant 108
+    call String.appendChar 2
+    push constant 108
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 32
+    call String.appendChar 2
+    push constant 87
+    call String.appendChar 2
+    push constant 111
+    call String.appendChar 2
+    push constant 114
+    call String.appendChar 2
+    push constant 108
+    call String.appendChar 2
+    push constant 100
+    call String.appendChar 2
+    push constant 33
+    call String.appendChar 2
+    pop local 1
+    push constant 4
+    call Array.new 1
+    pop local 0
+    push constant 0
+    push local 0
+    add
+    push constant 12
+    pop temp 0
+    pop pointer 1
+    push temp 0
+    pop that 0
+    push constant 1
+    push local 0
+    add
+    push constant 0
+    pop temp 0
+    pop pointer 1
+    push temp 0
+    pop that 0
+    push constant 2
+    push local 0
+    add
+    push constant 314
+    push constant 100
+    call Fraction.new 2
+    pop temp 0
+    pop pointer 1
+    push temp 0
+    pop that 0
+    push constant 3
+    push local 0
+    add
+    push local 1
+    pop temp 0
+    pop pointer 1
+    push temp 0
+    pop that 0
+    push constant 2
+    push local 0
+    add
+    pop pointer 1
+    push that 0
+    pop local 2
+    push local 2
+    call Fraction.print 1
+    pop temp 0
+    push constant 0
+    return
