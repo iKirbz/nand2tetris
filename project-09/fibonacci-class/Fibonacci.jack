@@ -1,0 +1,37 @@
+class Fibonacci {
+    field int first, second, passes;
+
+    constructor Fibonacci new(int n) {
+
+        let first = 0;
+        let second = 1;
+        let passes = n;
+
+        return this;
+    }
+
+    method int calculate() {
+        var int temp;
+
+        if (passes = 0) { 
+            return first;
+        }
+
+        let temp = first;
+        let first = second;
+        let second = temp + second; 
+
+        let passes = passes - 1;
+
+        return calculate();
+    }
+
+
+    // 0, 1, 1, 2, 3, 5, 8, 13;
+
+    method void dispose() {
+        do Memory.deAlloc(this);
+        
+        return;
+    }
+}

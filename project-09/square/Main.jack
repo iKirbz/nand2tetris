@@ -1,0 +1,27 @@
+class Main {
+    function void main() {
+        var Square square;
+
+        var int key;
+        let square = Square.new(10);
+
+
+        while (true) {
+
+            do square.clear();
+
+            let key = Keyboard.keyPressed();
+
+            if (key = 130) { do square.moveLeft(); }   // left arrow
+            if (key = 131) { do square.moveUp(); }   // up arrow
+            if (key = 132) { do square.moveRight(); }   // right arrow
+            if (key = 133) { do square.moveDown(); }   // down arrow
+
+            do Output.printString(key);
+
+            do square.draw();
+        }
+
+        return;
+    }
+}

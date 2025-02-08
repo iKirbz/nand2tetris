@@ -1,0 +1,14 @@
+class Main {
+    function void main() {
+        
+        var Fibonacci fib;
+        var int result;
+
+        let fib = Fibonacci.new(7);
+        let result = fib.calculate();
+
+        do Output.printInt(result);
+
+        return;
+    }
+}

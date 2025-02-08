@@ -1,0 +1,68 @@
+function Main.main 2
+    push constant 10
+    call Square.new 1
+    pop local 0
+label Main_0
+    push constant 1
+    neg
+    not
+    if-goto Main_1
+    push local 0
+    call Square.clear 1
+    pop temp 0
+    call Keyboard.keyPressed 0
+    pop local 1
+    push local 1
+    push constant 130
+    eq
+    not
+    if-goto Main_3
+    push local 0
+    call Square.moveLeft 1
+    pop temp 0
+    goto Main_2
+label Main_3
+label Main_2
+    push local 1
+    push constant 131
+    eq
+    not
+    if-goto Main_5
+    push local 0
+    call Square.moveUp 1
+    pop temp 0
+    goto Main_4
+label Main_5
+label Main_4
+    push local 1
+    push constant 132
+    eq
+    not
+    if-goto Main_7
+    push local 0
+    call Square.moveRight 1
+    pop temp 0
+    goto Main_6
+label Main_7
+label Main_6
+    push local 1
+    push constant 133
+    eq
+    not
+    if-goto Main_9
+    push local 0
+    call Square.moveDown 1
+    pop temp 0
+    goto Main_8
+label Main_9
+label Main_8
+    push local 1
+    call Output.printString 1
+    pop temp 0
+    push local 0
+    call Square.draw 1
+    pop temp 0
+    goto Main_0
+label Main_1
+    push constant 0
+    return

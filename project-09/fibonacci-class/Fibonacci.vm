@@ -1,0 +1,48 @@
+function Fibonacci.new 0
+    push constant 3
+    call Memory.alloc 1
+    pop pointer 0
+    push constant 0
+    pop this 0
+    push constant 1
+    pop this 1
+    push argument 0
+    pop this 2
+    push pointer 0
+    return
+function Fibonacci.calculate 1
+    push argument 0
+    pop pointer 0
+    push this 2
+    push constant 0
+    eq
+    not
+    if-goto Fibonacci_1
+    push this 0
+    return
+    goto Fibonacci_0
+label Fibonacci_1
+label Fibonacci_0
+    push this 0
+    pop local 0
+    push this 1
+    pop this 0
+    push local 0
+    push this 1
+    add
+    pop this 1
+    push this 2
+    push constant 1
+    sub
+    pop this 2
+    push pointer 0
+    call Fibonacci.calculate 1
+    return
+function Fibonacci.dispose 0
+    push argument 0
+    pop pointer 0
+    push pointer 0
+    call Memory.deAlloc 1
+    pop temp 0
+    push constant 0
+    return
