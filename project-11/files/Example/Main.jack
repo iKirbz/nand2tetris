@@ -1,0 +1,15 @@
+class Main {
+    function void main() {
+        var ExampleClass exampleVar;  // Local object variable
+        
+        let exampleVar = ExampleClass.new(10);  // Call constructor, store in local
+        do exampleVar.display();  // Call method on local object
+        do Main.process(exampleVar);   // Pass local object to a function
+        return;
+    }
+
+    function void process(ExampleClass obj) {
+        do obj.display();
+        return;
+    }
+}

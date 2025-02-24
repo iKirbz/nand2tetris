@@ -1,0 +1,14 @@
+class ExampleClass {
+    field int value;  // Instance field, stored in `this 0`
+
+    constructor ExampleClass new(int v) {
+        do Output.println();
+        let value = v;
+        return this;
+    }
+
+    method void display() {
+        do Output.printInt(value);
+        return;
+    }
+}

@@ -1,0 +1,18 @@
+function Main.main 1
+push constant 10
+call ExampleClass.new 1
+pop local 0
+push local 0
+call ExampleClass.display 1
+pop temp 0
+push local 0
+call Main.process 1
+pop temp 0
+push constant 0
+return
+function Main.process 0
+push argument 0
+call ExampleClass.display 1
+pop temp 0
+push constant 0
+return
